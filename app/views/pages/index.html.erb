@@ -1,0 +1,136 @@
+<article id="intro" class="grid_12-12">
+	<h1>What it is</h1>
+	<p>The Scalable Grid System or <a href="http://scalable.gs" title="Scalable Grid System">scalable.gs</a> for short, is a device independent and cross screen size web development framework.</p>
+	<p>It follows up on the main ideas from the <a href="http://960.gs" title="The 960 grid system">960.gs</a>, but makes it fluid like <a href="http://cssgrid.net/" title="CSS Grid">cssgrid.net</a>. It is topped off with some of the thoughts behind <a href="http://jquerymobile.com/" title="jQuery Mobile">jQuery Mobile</a> in addition to some custom mobile UX design.</p>
+</article>
+
+<article id="docs" class="grid_12-12">
+	<h1>How it works</h1>
+	<video id="movie" width="480" height="280" controls>
+	  <source src="introvideo.webm" type='video/webm; codecs="vp8, vorbis"' />
+	  <source src="introvideo.ogv" type='video/ogg; codecs="theora, vorbis"' />
+	  <source src="introvideo.mp4" />
+	  <p>Download video as <a href="introvideo.mp4">MP4</a>, <a href="introvideo.webm">WebM</a>, or <a href="introvideo.ogv">Ogg</a>.</p> 
+	</video>
+	<p>Some quick illustrations, then the documentation from the github wiki.</p>
+	<p>After you have selected your max grid system your goal on each "horizontal row" is to reach that number. Lets look at some examples:</p>
+	
+	<img src="#" width="580" height="460px" />
+	<p>In the example we use the 12 grid system to create a personal blog.Hover your mouse over the picture to see an overlay of how what kind of grid system the page has.</p>
+	<ul>
+		<li>Header
+			<ul>
+				<li></li>
+			</ul>
+		</li>
+		<li>Content
+			<ul>
+				<li>The content takes up 8 grids.</li>
+			</ul>
+		</li>
+		<li>Sidebar
+			<ul>
+				<li>The sidebar is pushed 1 grid from the left and takes up 3 grids. With that the sidebar slides in right next to the content area.</li>
+			</ul>
+		</li>
+		<li>Footer
+			<ul>
+				<li>The footer is divided into four sections of 4-grids. </li>
+			</ul>
+		</li>
+	</ul>
+	<h2></h2>
+	<p>If you haven't deselected it from your package the framework comes with build in optimisation for easy navigation access on your mobile device. Regardless of where the user are on the site he can access the navigation with a flick of the finger.</p>
+</article>
+
+<article id="customise" class="grid_12-12">
+	<h1>Customise</h1>
+	<ul>
+		<li><a href="" title="#">Basic</a>
+			<section id="basicgrid" class="gridsystem group">
+				<form id="basiccustomgrid">
+				
+					<fieldset>
+						<legend>Basic customisation:</legend>
+						<h3>Basic information</h3>
+						<input type="text" placeholder="Body font size"><br />
+						<input type="text" placeholder="Minimum width"><br />
+						<input type="text" placeholder="Max width"><br />
+						<input type="checkbox" name="gridsystem" value="4" /> Optimise navigation for the mobile platform<br />
+						<h3>Grid systems</h3>
+						<input type="checkbox" name="gridsystem" value="3" />3 grid system<br />
+						<input type="checkbox" name="gridsystem" value="4" />4 grid system<br />
+						<input type="checkbox" name="gridsystem" value="10" />10 grid system<br />
+						<input type="checkbox" name="gridsystem" value="12" />12 grid system<br />
+						<input type="checkbox" name="gridsystem" value="20" />20 grid system<br />
+						<input type="checkbox" name="gridsystem" value="24" />24 grid system<br />
+						<input type="text" placeholder="What is 4 + 3?"><br /><br />
+						<input type="submit" title="Download" value="Download">
+					</fieldset>
+				</form>
+			</section>
+		</li>
+		<li><a href="" title="#">Advanced</a>
+			<section id="customgrid" class="group">
+				<form id="advancedcustomgrid">
+					<fieldset>
+					<legend>Advanced customisation:</legend>
+						<h3>Basic information</h3>
+						<input type="text" placeholder="Body font size"><br /><br />
+						<input type="text" placeholder="Minimum width"><br /><br />
+						<input type="text" placeholder="Max width"><br /><br />
+						<input type="text" placeholder="Margin between columns"><br /><br /><br />
+						
+						<h3>Grid setup</h3>
+						<label for="customgridcolumns">Select your max grids</label>
+						<input type="range" min="4" max="100" name="customgridcolumns">
+						<br /><br /><br />
+						<h3>Header</h3>
+							<label for="customgridcolumnheader">How many columns is your header?</label>
+							<input type="range" min="4" max="100" name="customgridcolumnheader">
+						<h3>Navigation</h3>
+							<label for="customgridcolumnheader">How many columns is your navigation?</label>
+							<input type="range" min="4" max="100" name="customgridcolumnnavigation">
+						<h3>Main content</h3>
+							<label for="customgridcolumnheader">How many columns is your main content?</label>
+							<input type="range" min="4" max="100" name="customgridcolumnmain">
+						<h3>Sidebar</h3>
+							<label for="customgridcolumnheader">How many columns is your sidebar?</label>
+							<input type="range" min="4" max="100" name="customgridcolumnsidebar">
+						<h3>Footer</h3>
+							<label for="customgridcolumnheader">How many columns is your footer?</label>
+							<input type="range" min="4" max="100" name="customgridcolumnfooter">				
+						<button>Add another system</button><br /><br />
+						<hr />
+						<input type="text" placeholder="What is 4 + 3?"><br /><br />
+						<input type="submit" title="Download" value="Download">
+					</fieldset>
+				</form>
+			</section>
+		</li>
+	</ul>
+</article>
+
+
+
+<article id="contribute" class="grid_12-12">
+	<h1>Contribute</h1>
+	<p>Scalable.gs is divided into two parts.</p>
+	<h2>1 - The framework</h2>
+	<p>You have full insight into how all this works and are you could contribute to further development/refinements over on github.</p>
+	<h2>2 - Custom generator</h2>
+	<p>This part of scalable is an application that generate code based upon the framework idea. This application is part of a larger CMS and is not publicly available.</p>
+</article>
+
+<article id="about" class="grid_12-12">
+	<h1>About</h1>
+	<p><em>Note: </em>scalable.gs has it's roots as a Master of Digital Design Honours thesis. There will be done substantial amount of research to accompany the framework and to find the best solution especially for scaling down to the touch based small screen devices. <a href="http://kedano.net/design/scalable-grid-system-for-cross-platform-web-dev/" title="Scalable user interface framework with touch based gesture support">Read the research proposal</a>.</p>
+	<p>You can grab or contribute to the early alpha version on <a href="http://github.com/KDN/scalable.gs" title="scalable.gs on github">github</a>.</p>
+	<p><strong>Signup for updates about scalable.gs:</strong></p>
+	<form action="http://nordahl.us2.list-manage.com/subscribe/post?u=10fc05e3d055934809e417e82&amp;id=ad9afb4896" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+		<fieldset>
+			<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+			<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn">
+		</fieldset>	
+	</form>
+</article>

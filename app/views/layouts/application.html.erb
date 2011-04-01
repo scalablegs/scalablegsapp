@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Scalable.gs: your scalable grid system for cross platform web development</title>
+	<%= stylesheet_link_tag "scalablegs", "screen" %>
+	<%= javascript_include_tag "libs/modernizr" %>
+	<link rel="shortcut icon" href="http://scalable.gs/favicon.ico">
+	<meta name="viewport" content="width=device-width" />
+	<link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<!--[if lt IE 9]>
+   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="/javascripts/libs/modernizr.js"></script>
+	<style>
+	.scalable .grid_4-12{-webkit-transition: width 1s linear;}
+	.scalable .grid_3-12{-webkit-transition: width 1s linear;}
+	@media screen and (max-width: 770px) {	
+		.scalable .grid_4-12{width:96%;}
+		.scalable .grid_3-12{width:46%;}
+		#github{display:none;}	
+		#navigation{display:none;position:absolute;background:#fff;}
+	}
+	nav li a:hover{text-decoration:none;}
+	
+	</style>
+</head>
+<body class="scalable">
+	<header>
+		<hgroup  class="grid_12-12 group">
+			<h1 id="sitetitle">scalable grid system</h1>
+			<h2></h2>
+		</hgroup>
+		<nav id="navigation">
+			<ul>
+				<li class="grid_4-12"><a href="#download" title="production">Scalable.gs &#8220;stripped&#8221;</a><span>12kb file size</span></li>
+				<li class="grid_4-12"><a href="#howitworks" title="development">Scalable.gs documented</a><span>22kb file size</span></li>
+				<li class="grid_4-12"><a href="#customise" title="customise">Scalable.gs custom</a><span>from 2kb file size</span></li>
+				<li class="grid_3-12"><a href="#howitworks" title="howitworks" class="crumb">1. How it works</a></li>
+				<li class="grid_3-12"><a href="#docs" title="customize" class="crumb">2. Docs</a></li>
+				<li class="grid_3-12"><a href="#contribute" title="contact" class="crumb">3. Contribute</a></li>
+				<li class="grid_3-12"><a href="#about" title="about" class="crumb">4. About</a></li>
+			</ul>
+		</nav>
+	</header>
+	<%= yield %>
+	<footer>
+		<p>Made by <a href="http://nordahl.me" title="Kenneth Nordahl's website">Kenneth Nordahl</a></p>
+	</footer>
+	<a href="http://github.com/KDN/scalable.gs" id="github"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://assets2.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_darkblue_121621.png&path=" alt="Fork me on GitHub"></a>
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+	<script src="/javascripts/plugins.js"></script>
+	<script src="/javascripts/script.js"></script>
+	<script>
+	$(document).ready(function() {
+		$('body').swipe({
+		     swipeLeft: function() { $('#navigation').fadeIn() },
+		     swipeRight: function() { $('#navigation').fadeOut() },
+		});
+	});	
+	</script>
+	
+	<script type="text/javascript" src="http://include.reinvigorate.net/re_.js"></script>
+	<script type="text/javascript">
+		try {reinvigorate.track("2y4y6-3uc0mf29e0");} catch(err) {}
+	</script>
+	<script type="text/javascript">
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-21154181-1']);
+	  _gaq.push(['_trackPageview']);	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
+</body>
+</html>
