@@ -19,7 +19,7 @@ class PagesController < ApplicationController
       
       # while
       #  system.puts ".grid_" @conunter "-" @gridmax
-        
+     
         
       #  counter +=
       # end
@@ -31,6 +31,30 @@ class PagesController < ApplicationController
       # end
     end
     
+    
+    
+    
+     # Create new file called 'filename.txt' at a specified path.
+  #    scalable = File.new("path/filename.txt","w")
+      # Write text to the file.
+   #   scalable.write "text to be written to file"
+      # Close the file.
+    #  scalable.close
+      
+      
+      
+#     if var == "less"
+#       print “Variable is 10″
+#         send_file t.path, :type => 'application/zip', :description => 'attachment', :filename => "scalablegs.zip"
+#      elsif var == "css"
+#         print “Variable is 20″
+#         send_file t.path, :type => 'application/zip', :description => 'attachment', :filename => "scalablegs.zip"
+#      else
+#         print “Variable is something else”
+#      end
+      
+
+      
   end 
     
     

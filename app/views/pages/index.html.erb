@@ -45,70 +45,36 @@
 
 <article id="customise" class="grid_12-12">
 	<h1>Customise</h1>
-	<ul>
-		<li><a href="" title="#">Basic</a>
-			<section id="basicgrid" class="gridsystem group">
-				<form id="basiccustomgrid">
-				
-					<fieldset>
-						<legend>Basic customisation:</legend>
-						<h3>Basic information</h3>
-						<input type="text" placeholder="Body font size"><br />
-						<input type="text" placeholder="Minimum width"><br />
-						<input type="text" placeholder="Max width"><br />
-						<input type="checkbox" name="gridsystem" value="4" /> Optimise navigation for the mobile platform<br />
-						<h3>Grid systems</h3>
-						<input type="checkbox" name="gridsystem" value="3" />3 grid system<br />
-						<input type="checkbox" name="gridsystem" value="4" />4 grid system<br />
-						<input type="checkbox" name="gridsystem" value="10" />10 grid system<br />
-						<input type="checkbox" name="gridsystem" value="12" />12 grid system<br />
-						<input type="checkbox" name="gridsystem" value="20" />20 grid system<br />
-						<input type="checkbox" name="gridsystem" value="24" />24 grid system<br />
-						<input type="text" placeholder="What is 4 + 3?"><br /><br />
-						<input type="submit" title="Download" value="Download">
-					</fieldset>
-				</form>
-			</section>
-		</li>
-		<li><a href="" title="#">Advanced</a>
-			<section id="customgrid" class="group">
-				<form id="advancedcustomgrid">
-					<fieldset>
-					<legend>Advanced customisation:</legend>
-						<h3>Basic information</h3>
-						<input type="text" placeholder="Body font size"><br /><br />
-						<input type="text" placeholder="Minimum width"><br /><br />
-						<input type="text" placeholder="Max width"><br /><br />
-						<input type="text" placeholder="Margin between columns"><br /><br /><br />
-						
-						<h3>Grid setup</h3>
-						<label for="customgridcolumns">Select your max grids</label>
-						<input type="range" min="4" max="100" name="customgridcolumns">
-						<br /><br /><br />
-						<h3>Header</h3>
-							<label for="customgridcolumnheader">How many columns is your header?</label>
-							<input type="range" min="4" max="100" name="customgridcolumnheader">
-						<h3>Navigation</h3>
-							<label for="customgridcolumnheader">How many columns is your navigation?</label>
-							<input type="range" min="4" max="100" name="customgridcolumnnavigation">
-						<h3>Main content</h3>
-							<label for="customgridcolumnheader">How many columns is your main content?</label>
-							<input type="range" min="4" max="100" name="customgridcolumnmain">
-						<h3>Sidebar</h3>
-							<label for="customgridcolumnheader">How many columns is your sidebar?</label>
-							<input type="range" min="4" max="100" name="customgridcolumnsidebar">
-						<h3>Footer</h3>
-							<label for="customgridcolumnheader">How many columns is your footer?</label>
-							<input type="range" min="4" max="100" name="customgridcolumnfooter">				
-						<button>Add another system</button><br /><br />
-						<hr />
-						<input type="text" placeholder="What is 4 + 3?"><br /><br />
-						<input type="submit" title="Download" value="Download">
-					</fieldset>
-				</form>
-			</section>
-		</li>
-	</ul>
+
+	<section id="basicgrid" class="gridsystem group">
+		<form id="customgrid">		
+			<fieldset>
+				<legend>Basic customisation:</legend>
+				<h3>Basic information</h3>
+				<%= form_tag do %>
+
+				  <%= text_field(:body_font, :placeholder => "Body font size") %>
+				  <%= text_field(:min_width, :placeholder => "Minimum width") %>
+				  <%= text_field(:max_width, :placeholder => "Max width")  %>
+
+					<%= check_box_tag(:mobile_platform) %>
+					<%= label_tag(:mobile_platform, "Optimise navigation for the mobile platform") %>
+
+
+
+				  <%= submit_tag("Download") %>
+				<% end %>
+		<input type="text" placeholder="Body font size (in px)"><br />
+		<input type="text" placeholder="Minimum width"><br />
+		<input type="text" placeholder="Max width"><br /><br />
+		<input type="checkbox" name="gridsystem" value="4" checked="checked" /> Optimise navigation for the mobile platform<br />
+		<label for="customgridcolumns">Select your max grids</label><br />
+		<input type="range" min="4" max="100" name="customgridcolumns"><br />
+		<input type="text" placeholder="What is 4 + 3?"><br /><br />
+		<input type="submit" title="Download" value="Download">
+			</fieldset>
+		</form>
+	</section>
 </article>
 
 
