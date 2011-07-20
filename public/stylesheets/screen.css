@@ -164,7 +164,7 @@ button {  width: auto; overflow: visible; }
 
 /* TYPOGRAPHY */
 html{-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;-o-font-smoothing: antialiased;-ms-font-smoothing: antialiased;font-smoothing: antialiased;}
-body{ font-family: 'PT Sans', arial, serif; font-weight: normal;color: #ddd;}
+body{ font-family: 'PT Sans', arial, serif; font-weight: normal;color: #bbb;}
 h1,h2,h3,h4,h5,h6 { }
 h1{font-size: 2em;font-family: 'Raleway', arial, serif; font-weight: 100;}
 h2{font-size: 1em;}
@@ -200,7 +200,7 @@ html{
 		);
 		/*SET WEBKIT BACKGROUND SIZE*/
 		-webkit-background-size: 100px 100px;
-
+		
 	/*MOZILLA*/
 	background-image:
 		/*VERTICAL LINES*/
@@ -258,75 +258,36 @@ html{
 		);
 }
 		html.no-cssgradients{background: url(../img/background-tile.png) repeat center;}
+	
 	body{font-size: 16px;}
+	/* HEADER DESIGN */
+		body > header{}
+		body > header hgroup{background: rgba(80, 85, 95, .85);margin: 4em 0;padding: 1em 0;}
+		body > header hgroup h1{font-size: 3.9em;padding-left: 3px;color: #eee;text-shadow: 0 1px 0 rgba(0,0,0,.3);padding-top: 0;}
+		body > header hgroup h2{font-size: 2.80em;color: #eee;margin-top: -7px;text-shadow: 0 1px 0 rgba(0,0,0,.3);}
 	
+
 	
-	
-	
-	
-	body > header{}
-	body > header hgroup{background: rgba(80, 85, 95, .85);margin: 4em 0;padding: 1em 0;}
-	body > header hgroup h1{font-size: 3.9em;padding-left: 3px;color: #eee;text-shadow: 0 1px 0 rgba(0,0,0,.3);padding-top: 0;}
-	body > header hgroup h2{font-size: 2.80em;color: #eee;margin-top: -7px;text-shadow: 0 1px 0 rgba(0,0,0,.3);}
-	
-	
-	
-		
-	
-	
-	
-	
-	
-	
-	nav{}
-		nav ul li{float: left;margin: 20px 0;}
-			nav ul li a{display: block;text-align: center;background: rgba(80, 85, 95, .85);line-height: 3em;-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.5);font-weight: bold;}
-			nav ul li a[title="production"]{background:rgba(129,192,161,1);color: rgba(0,0,0,.7);text-shadow: 0 1px 0 rgba(255,255,255,.6);}
-			nav ul li a[title="development"]{background:rgba(192,161,161,1);color: rgba(0,0,0,.7);text-shadow: 0 1px 0 rgba(255,255,255,.6);}
-			nav ul li a[title="customise"]{background:rgba(110,125,202,1);color: rgba(0,0,0,.7);text-shadow: 0 1px 0 rgba(255,255,255,.6);}
+		nav{}
+			nav ul li{float: left;margin: 20px 0;}
+				nav ul li a{display: block;text-align: center;background: rgba(80, 85, 95, .85);line-height: 3em;-webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.5);font-weight: bold;}
+				nav ul li a[title="production"]{background:rgba(129,192,161,1);color: rgba(0,0,0,.7);text-shadow: 0 1px 0 rgba(255,255,255,.6);}
+				nav ul li a[title="development"]{background:rgba(192,161,161,1);color: rgba(0,0,0,.7);text-shadow: 0 1px 0 rgba(255,255,255,.6);}
+				nav ul li a[title="customise"]{background:rgba(110,125,202,1);color: rgba(0,0,0,.7);text-shadow: 0 1px 0 rgba(255,255,255,.6);}
+
+				nav ul li:nth-of-type(3) a.crumb:before{border:none;}
+				nav ul li:nth-of-type(6) a.crumb:after{border:none;}
 			
-			
-			
-/*
-			nav ul li a.crumb:before{
-				content: "";
-				position: absolute;
-				top: .5em;
-				left: 0;
-				right: 0;
-				border: 1em solid;
-				border-color: transparent transparent transparent #505560;
-			}
-			
-			nav ul li a.crumb:after{
-				content: "";
-				position: absolute;
-				top: .5em;
-				right: -1.9em;
-				border: 1em solid;
-				border-color: transparent transparent transparent #505560;
-			}
-*/
-			nav ul li:nth-of-type(3) a.crumb:before{border:none;}
-			nav ul li:nth-of-type(6) a.crumb:after{border:none;}
+				nav li a:hover{text-decoration:none;}
 	/* ARTICLE DESIGN */
-	body > article{background:#55555f;background: rgba(80, 85, 95, .85);text-shadow: 0 1px 0 rgba(0,0,0,.3);margin-top: 51px;padding: 2em 0;}
+		body > article{background:#55555f;background: rgba(80, 85, 95, .85);text-shadow: 0 1px 0 rgba(0,0,0,.3);margin-top: 51px;padding: 2em 0;}
 			article h1{font-size: 3em;padding-left: .25em}
 			article p,article h2,article form{padding: 0 1em;}
 			#howitworks{}
 			#customise{}
 				#basiccustomgrid,#advancedcustomgrid{float: left;margin: 4em 0 ;}
 				#basiccustomgrid input,#advancedcustomgrid input,#advancedcustomgrid button{float: left;}
-				fieldset{ 
-					display: block;
-					-webkit-margin-start: 2px;
-					-webkit-margin-end: 2px;
-					-webkit-padding-before: 0.35em;
-					-webkit-padding-start: 0.75em;
-					-webkit-padding-end: 0.75em;
-					-webkit-padding-after: 0.625em;
-					border: 2px groove threedface;
-				 }
+
 			#contribute{}
 			#about{}
 		
@@ -373,6 +334,15 @@ html{
 @media screen and (max-device-width: 480px) {
 	
 }
+
+
+@media screen and (max-width: 770px) {	
+	.scalable .grid_4-12{width:96%;}
+	.scalable .grid_3-12{width:46%;}
+	#github{display:none;}	
+	#navigation{display:none;position:absolute;background:#50555f;}
+}
+
 
 /* PRINT STYLES  */
 @media print {

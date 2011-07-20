@@ -107,3 +107,7 @@ window.log = function(){
 		});
 	};
 })(jQuery);
+
+/* SAP plugin - https://github.com/Forrst/sap */
+(function(a){a.fn.sap=function(d){var i={distanceFromTheTop:0};d=a.extend(i,d);var h=a(this);var b=h.offset().top;var e=h.width()+"px";var g=a('<div class="sap-shimy-shim"></div>');var f=a(window);var c=a(document);f.scroll(function(){var j=f.scrollTop();if((j+d.distanceFromTheTop+h.height())<(c.height()-f.height())&&(j+d.distanceFromTheTop)>h.offset().top){h.css({position:"fixed",width:e,top:d.distanceFromTheTop+"px"});g.css({width:e,height:h.height()});h.before(g)}else{if(j+d.distanceFromTheTop<b){g.remove();h.css({position:"static",width:e,top:""})}}})}}(jQuery));
+

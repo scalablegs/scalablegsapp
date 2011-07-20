@@ -45,20 +45,23 @@ class PagesController < ApplicationController
       
 #     if var == "less"
 #       print “Variable is 10″
-#         send_file t.path, :type => 'application/zip', :description => 'attachment', :filename => "scalablegs.zip"
-#      elsif var == "css"
+#         send_file t.path, :type => 'application/zip', :disposition => 'attachment', :filename => "scalablegs.zip"
+#     elsif var == "css"
 #         print “Variable is 20″
-#         send_file t.path, :type => 'application/zip', :description => 'attachment', :filename => "scalablegs.zip"
-#      else
+#         send_file t.path, :type => 'application/zip', :disposition => 'attachment', :filename => "scalablegs.zip"
+#     else
 #         print “Variable is something else”
-#      end
+#     end
       
-
+    
       
   end 
     
     
-  def zippit  
+  def download  
+    
+    
+    
     # Zipping of the file
     
     require 'zip/zip'
@@ -79,7 +82,7 @@ class PagesController < ApplicationController
     end
     # End of the block automatically closes the file.
     # Send it using the right mime type, with a download window and some nice file name.
-    send_file t.path, :type => 'application/zip', :description => 'attachment', :filename => "scalablegs.zip"
+    send_file t.path, :type => 'application/zip', :disposition => 'attachment', :filename => "scalablegs.zip"
     # The temp file will be deleted some time..
     t.close
     

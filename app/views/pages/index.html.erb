@@ -41,51 +41,75 @@
 	</ul>
 	<h2></h2>
 	<p>If you haven't deselected it from your package the framework comes with build in optimisation for easy navigation access on your mobile device. Regardless of where the user are on the site he can access the navigation with a flick of the finger.</p>
+	
+</article>
+
+<article id="docs" class="grid_12-12">
+		<h1>Readme</h1>
+		<h2>Download package</h2>
+		<ol>
+			<li>Download the package and include either the 
+		</ol>
+		<h2>Customised </h2>
+		<h2>Compass plugin</h2>
+		<h3>Install</h3>
+		<code><pre>
+	gem install compass-scalablegs-plugin
+		</pre></code>
+		<ul>
+			<li>Create a Scalablegs-based Compass Project</li>
+		</ul>
+		<code><pre>
+	compass create -r scalable my_project --using scalable
+		</code></pre>
+		<ul>
+			<li>Or, If you prefer to use Sass's indentation based syntax:</li>
+		</ul>
+		<code><pre>
+	compass create -r scalable my_project --using scalable --syntax sass
+		</code></pre>
+		<p>Then edit your `scalable.sass` accordingly.</p>
+		<h3>Customising your Grid System</h3>
+		<p>This plugin uses the following configuration variables:</p>
+		<ul>
+			<li>$scalable-columns` (default: 20) controls the default number of grid columns<li>
+			<li>$scalable-grid-min-width` (default: 26em - with the assumption of a 12px body font size) controls the default minimum site width</li>
+			<li>$scalable-grid-max-width` (default: 82em - with the assumption of a 12px body font size) controls the default maximum site width</li>
+			<li>$scalable-gutter-width` (default: 2%) controls the default gutter width</li>
+		</ul>
+		<p>All of the mixins included with this plugin use these configuration variables as defaults if the corresponding argument is omitted from a mixin call.</p>
 </article>
 
 <article id="customise" class="grid_12-12">
 	<h1>Customise</h1>
 
 	<section id="basicgrid" class="gridsystem group">
-		<form id="customgrid">		
-			<fieldset>
-				<legend>Basic customisation:</legend>
-				<h3>Basic information</h3>
-				<%= form_tag do %>
-
-				  <%= text_field(:body_font, :placeholder => "Body font size") %>
-				  <%= text_field(:min_width, :placeholder => "Minimum width") %>
-				  <%= text_field(:max_width, :placeholder => "Max width")  %>
-
-					<%= check_box_tag(:mobile_platform) %>
-					<%= label_tag(:mobile_platform, "Optimise navigation for the mobile platform") %>
-
-
-
-				  <%= submit_tag("Download") %>
-				<% end %>
-		<input type="text" placeholder="Body font size (in px)"><br />
-		<input type="text" placeholder="Minimum width"><br />
-		<input type="text" placeholder="Max width"><br /><br />
-		<input type="checkbox" name="gridsystem" value="4" checked="checked" /> Optimise navigation for the mobile platform<br />
-		<label for="customgridcolumns">Select your max grids</label><br />
-		<input type="range" min="4" max="100" name="customgridcolumns"><br />
-		<input type="text" placeholder="What is 4 + 3?"><br /><br />
-		<input type="submit" title="Download" value="Download">
-			</fieldset>
-		</form>
+		<%= form_for :download, @article, :url => { :action => "download" }, :html => {:class => "nifty_form"} do |f| %>
+		  <%= text_field(:body_font, :placeholder => "Body font size") %>
+		  <%= text_field(:min_width, :placeholder => "Minimum width") %>
+		  <%= text_field(:max_width, :placeholder => "Max width")  %>
+			<%= range_field_tag :range, 5, :min => 4, :max => 100 %>
+			<%= check_box_tag(:mobile_platform) %>
+			<%= label_tag(:mobile_platform, "Optimise navigation for the mobile platform") %>
+		  <%= submit_tag("Download") %>
+		<% end %>
 	</section>
 </article>
 
 
 
+	
+
+
 <article id="contribute" class="grid_12-12">
 	<h1>Contribute</h1>
-	<p>Scalable.gs is divided into two parts.</p>
+	<p>Scalable.gs is divided into tree parts for your convenience.</p>
 	<h2>1 - The framework</h2>
-	<p>You have full insight into how all this works and are you could contribute to further development/refinements over on github.</p>
+	<p>You have full insight into how all this works and are you could <a href="https://github.com/KDN/scalable.gs">contribute to further development/refinements of the framework over on github</a>.</p>
 	<h2>2 - Custom generator</h2>
-	<p>This part of scalable is an application that generate code based upon the framework idea. This application is part of a larger CMS and is not publicly available.</p>
+	<p>This part of Scalable.gs is an application that generate code based upon the framework idea, in fact it is the application that outputs this website. You can <a href="https://github.com/KDN/scalablegsapp">view and contribute to the source code on Github</a>.</p>
+	<h2>3 - Compass plugin for rails</h2>
+	<p>The compass plugin generates either SCSS or SASS on request when the gem is installed. <a href="https://github.com/KDN/compass-scalablegs-plugin">Contribute to the compass plugin on Github</a></p>
 </article>
 
 <article id="about" class="grid_12-12">
