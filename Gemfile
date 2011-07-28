@@ -10,11 +10,11 @@ gem 'haml', "~> 3.1.2"
 gem 'css3buttons', "~> 0.9.5"
 group :assets do
   gem 'sass-rails', "~> 3.1.0.rc"
-  gem 'coffee-script', "~> 2.2.0"
+  # gem 'coffee-script', "~> 2.2.0"
   gem 'uglifier', "~> 1.0.0"	
 end
 
-gem 'jquery-rails', "~> 1.0.12"
+# gem 'jquery-rails', "~> 1.0.12"
 
 # Use unicorn as the web server
 # gem 'unicorn'
