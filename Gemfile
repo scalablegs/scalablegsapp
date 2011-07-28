@@ -15,6 +15,7 @@ group :assets do
 end
 
 # gem 'jquery-rails', "~> 1.0.12"
+gem "execjs", "~> 1.2.0"
 
 # Use unicorn as the web server
 # gem 'unicorn'
