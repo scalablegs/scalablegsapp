@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Scalablegsapp::Application.config.secret_token = 'd75fb9b53ed5c2c140189b83e36287c2578716212421554000c95258abb5e51f8cda21f245c707540aff2108bddf3f60d20a63cad14b3dc0e847323fde19ef9a'
+Scalablegsapp::Application.config.secret_token = 'c0a95ea20d32bb1f618f843e3cb073b5b12586fbd857b44b0ab3db351c515f75eff53214b6d1bec5e40291f5c3e712ee7e55bd209007ee5e5bfd63b07cc6a946'

@@ -2,13 +2,32 @@
 <html>
 <head>
   <title>Scalablegsapp</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:100|PT+Sans' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+	<!--[if IE]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+  <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="scalable">
+	<header class="grid_12-12">
+		<h1 id="sitetitle"><a href="http://scalable.gs">scalable grid system</a></h1>
+	</header>
+	<%= yield %>
+	<footer>
+		<p>Made by <a href="http://nordahl.me" title="Kenneth Nordahl's website">Kenneth Nordahl</a></p>
+	</footer>
+	<a href="http://github.com/KDN/scalable.gs" id="github"><img style="position: fixed; top: 0; right: 0; border: 0;" src="https://assets2.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71?repo=&url=http%3A%2F%2Fs3.amazonaws.com%2Fgithub%2Fribbons%2Fforkme_right_darkblue_121621.png&path=" alt="Fork me on GitHub"></a>
+	<script>
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-21154181-1']);
+	  _gaq.push(['_trackPageview']);	
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+	</script>
 </body>
 </html>

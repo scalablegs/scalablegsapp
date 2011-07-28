@@ -1,0 +1,223 @@
+ /* Primary Styles
+    Author: Kenneth Nordahl
+ */
+
+/* TYPOGRAPHY */
+html{-webkit-font-smoothing: antialiased;-moz-font-smoothing: antialiased;-o-font-smoothing: antialiased;-ms-font-smoothing: antialiased;font-smoothing: antialiased;}
+body{ font-family: 'PT Sans', arial, serif; font-weight: normal;color: #bbb;}
+h1,h2,h3,h4,h5,h6 { }
+h1{font-size: 2em;font-family: 'Raleway', arial, serif; font-weight: 100;}
+h2{font-size: 1em;}
+a,a:visited{color: #ddd;text-decoration: none;}
+a:hover {color: #ccc;text-decoration: underline;}
+p{margin-bottom: 1em;line-height: 1.4em;}
+em{font-style: italic;}
+strong{color: #fff;}
+
+
+/* ELEMENT DESIGN */
+html{
+	background: repeat center;
+	background-color: #50555f;
+	/*WEBKIT*/
+	background-image:
+		/*VERTICAL LINES*/
+		-webkit-gradient(linear, left top, left bottom,
+			color-stop(0, rgba(255,255,255,.4)), color-stop(0.01, rgba(80,85,95,0)), color-stop(0.2, rgba(80,85,95,0)),
+			color-stop(0.2, rgba(255,255,255,.1)), color-stop(0.21, rgba(80,85,95,0)), color-stop(0.4, rgba(80,85,95,0)),
+			color-stop(0.4, rgba(255,255,255,.1)), color-stop(0.41, rgba(80,85,95,0)), color-stop(0.6, rgba(80,85,95,0)),
+			color-stop(0.6, rgba(255,255,255,.1)), color-stop(0.61, rgba(80,85,95,0)), color-stop(0.8, rgba(80,85,95,0)),
+			color-stop(0.8, rgba(255,255,255,.1)), color-stop(0.81, rgba(80,85,95,0)), color-stop(1, rgba(80,85,95,0))
+		),
+		/*HORIZONTAL LINES*/
+		-webkit-gradient(linear, left top, right top,
+			color-stop(0, rgba(255,255,255,.4)), color-stop(0.01, rgba(80,85,95,0)), color-stop(0.2, rgba(80,85,95,0)),
+			color-stop(0.2, rgba(255,255,255,.1)), color-stop(0.21, rgba(80,85,95,0)), color-stop(0.4, rgba(80,85,95,0)),
+			color-stop(0.4, rgba(255,255,255,.1)), color-stop(0.41, rgba(80,85,95,0)), color-stop(0.6, rgba(80,85,95,0)),
+			color-stop(0.6, rgba(255,255,255,.1)), color-stop(0.61, rgba(80,85,95,0)), color-stop(0.8, rgba(80,85,95,0)),
+			color-stop(0.8, rgba(255,255,255,.1)), color-stop(0.81, rgba(80,85,95,0)), color-stop(1, rgba(80,85,95,0))
+		);
+		/*SET WEBKIT BACKGROUND SIZE*/
+		-webkit-background-size: 100px 100px;
+		
+	/*MOZILLA*/
+	background-image:
+		/*VERTICAL LINES*/
+		-moz-repeating-linear-gradient(top,
+			rgba(255,255,255,.4) 0px,	rgba(255,255,255,0) 1px, rgba(80,85,95,0) 20px, 
+			rgba(255,255,255,.1) 20px,	rgba(255,255,255,0) 21px, rgba(80,85,95,0) 40px, 
+			rgba(255,255,255,.1) 40px,	rgba(255,255,255,0) 41px, rgba(80,85,95,0) 60px, 
+			rgba(255,255,255,.1) 60px,	rgba(255,255,255,0) 61px, rgba(80,85,95,0) 80px, 
+			rgba(255,255,255,.1) 80px,	rgba(255,255,255,0) 81px, rgba(80,85,95,0) 99px
+		),
+		/*HORIZONTAL LINES*/
+		-moz-repeating-linear-gradient(left,
+			rgba(255,255,255,.4) 0px,	rgba(255,255,255,0) 1px, rgba(80,85,95,0) 20px, 
+			rgba(255,255,255,.1) 20px,	rgba(255,255,255,0) 21px, rgba(80,85,95,0) 40px, 
+			rgba(255,255,255,.1) 40px,	rgba(255,255,255,0) 41px, rgba(80,85,95,0) 60px, 
+			rgba(255,255,255,.1) 60px,	rgba(255,255,255,0) 61px, rgba(80,85,95,0) 80px, 
+			rgba(255,255,255,.1) 80px,	rgba(255,255,255,0) 81px, rgba(80,85,95,0) 99px
+		);
+		
+	/*OPERA*/
+	background-image:
+		/*VERTICAL LINES*/
+		-o-repeating-linear-gradient(top,
+			rgba(255,255,255,.4) 0px,	rgba(255,255,255,0) 1px, rgba(80,85,95,0) 20px, 
+			rgba(255,255,255,.1) 20px,	rgba(255,255,255,0) 21px, rgba(80,85,95,0) 40px, 
+			rgba(255,255,255,.1) 40px,	rgba(255,255,255,0) 41px, rgba(80,85,95,0) 60px, 
+			rgba(255,255,255,.1) 60px,	rgba(255,255,255,0) 61px, rgba(80,85,95,0) 80px, 
+			rgba(255,255,255,.1) 80px,	rgba(255,255,255,0) 81px, rgba(80,85,95,0) 99px
+		),
+		/*HORIZONTAL LINES*/
+		-o-repeating-linear-gradient(left,
+			rgba(255,255,255,.4) 0px,	rgba(255,255,255,0) 1px, rgba(80,85,95,0) 20px, 
+			rgba(255,255,255,.1) 20px,	rgba(255,255,255,0) 21px, rgba(80,85,95,0) 40px, 
+			rgba(255,255,255,.1) 40px,	rgba(255,255,255,0) 41px, rgba(80,85,95,0) 60px, 
+			rgba(255,255,255,.1) 60px,	rgba(255,255,255,0) 61px, rgba(80,85,95,0) 80px, 
+			rgba(255,255,255,.1) 80px,	rgba(255,255,255,0) 81px, rgba(80,85,95,0) 99px
+		);				
+	/*STANDARD*/
+	background-image:
+		/*VERTICAL LINES*/
+		repeating-linear-gradient(top,
+			rgba(255,255,255,.4) 0px,	rgba(255,255,255,0) 1px, rgba(80,85,95,0) 20px, 
+			rgba(255,255,255,.1) 20px,	rgba(255,255,255,0) 21px, rgba(80,85,95,0) 40px, 
+			rgba(255,255,255,.1) 40px,	rgba(255,255,255,0) 41px, rgba(80,85,95,0) 60px, 
+			rgba(255,255,255,.1) 60px,	rgba(255,255,255,0) 61px, rgba(80,85,95,0) 80px, 
+			rgba(255,255,255,.1) 80px,	rgba(255,255,255,0) 81px, rgba(80,85,95,0) 99px
+		),
+		/*HORIZONTAL LINES*/
+		repeating-linear-gradient(left,
+			rgba(255,255,255,.4) 0px,	rgba(255,255,255,0) 1px, rgba(80,85,95,0) 20px, 
+			rgba(255,255,255,.1) 20px,	rgba(255,255,255,0) 21px, rgba(80,85,95,0) 40px, 
+			rgba(255,255,255,.1) 40px,	rgba(255,255,255,0) 41px, rgba(80,85,95,0) 60px, 
+			rgba(255,255,255,.1) 60px,	rgba(255,255,255,0) 61px, rgba(80,85,95,0) 80px, 
+			rgba(255,255,255,.1) 80px,	rgba(255,255,255,0) 81px, rgba(80,85,95,0) 99px
+		);
+}
+		html.no-cssgradients{background: url(../img/background-tile.png) repeat center;}
+	
+	body{
+		font-size: 16px;
+		}
+		/* HEADER DESIGN */
+		body > header{
+			background: rgba(80, 85, 95, .75);
+			margin: 2em 0 0;
+			padding: 1em 0;
+			padding-left: .25em;
+			h1{
+				font-size: 3em;
+				padding-left: 3px;
+				color: #ccc;
+				text-shadow: 0 1px 0 rgba(0,0,0,.3);
+				padding-top: 0;
+				a{
+					&:hover{
+						color:#fff;
+						text-decoration:none;
+					}
+				}
+			}
+			h2{	
+				font-size: 2.80em;
+				color: #eee;
+				margin-top: -7px;
+				text-shadow: 0 1px 0 rgba(0,0,0,.3);
+			}
+		}
+		/* ARTICLE DESIGN */
+		body > article{
+			background:#55555f;
+			background: rgba(80, 85, 95, .75);
+			text-shadow: 0 1px 0 rgba(0,0,0,.3);
+			margin-top: 3em;
+			padding: 2em 0;
+			h1{
+				font-size: 3em;padding-left: .25em;
+			}
+			p,h2,form{
+				padding: 0 1em;
+			}
+			.button-group{
+				margin:1em 0;
+				padding-left:1em;
+				a{
+					-webkit-transition: width 1s linear;
+					-moz-transition: width 1s linear;
+					-o-transition: width 1s linear;
+					-ms-transition: width 1s linear;
+					transition: width 1s linear;
+				}
+			}
+		}
+
+		/* FOOTER */
+		body > footer{
+			float: right;
+			width: 200px;
+			text-align:right;
+			margin: 4em 0;
+			padding-right: 1em;
+		}
+/* TOOLS */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.invisible { visibility: hidden; }
+.alignleft{text-align: left;}
+.alignright{text-align: right;}
+.floatleft{float: left;}
+.floatright{float: right;}
+.group:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.group:after { clear: both; }
+.group { zoom: 1; }
+
+
+
+
+
+/* media queries for responsive design*/
+
+@media all and (orientation:portrait) {
+
+}
+
+@media all and (orientation:landscape) {
+
+}
+@media screen and (max-device-width: 480px) {
+	
+}
+
+
+@media screen and (max-width: 700px) {
+	#github{display:none;}
+	.button-group a{
+		float:left;
+		width:45%;
+		margin-bottom:1em;
+	}
+	.button-group .button{
+		border-radius:0.2em;
+	}
+}
+
+
+/* PRINT STYLES  */
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } /* black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* don't show links for images, or javascript/internal links */
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}
+
