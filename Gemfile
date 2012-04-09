@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', :git => 'git://github.com/rails/rails.git', :branch => '3-1-stable'
-gem 'sprockets', :git => 'git://github.com/sstephenson/sprockets.git'
+gem 'rails', '3.1.0'
+gem 'sprockets'
 
 gem "pg", "~> 0.11.0"
 
